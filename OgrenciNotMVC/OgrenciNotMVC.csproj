@@ -159,6 +159,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\KuluplerController.cs" />
+    <Compile Include="Controllers\OgrencilerController.cs" />
+    <Compile Include="Controllers\SinavlarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -608,6 +611,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Kulupler\Index.cshtml" />
+    <Content Include="Views\Ogrenciler\Index.cshtml" />
+    <Content Include="Views\Sinavlar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

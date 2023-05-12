@@ -1,0 +1,39 @@
+﻿@*Aşağıdaki using ile modelimizi dahil ediyoruz. Sonra model diye bir liste değişkeni oluşturup, bu modele tbl oğrencileri listeletiyoruz.*@
+
+@using OgrenciNotMVC.Models.EntityFramework
+@model List<TBLOGRENCILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*Aşağıda listelenecek verilerin tablosu hazırlanıyor. Önce th ile table headlar ve içerikleri yazıldıktan sonra, tbody tagı içinde foreach döngüsü kurulup, ogr döngü değişkeni oluşturuluyor. yukarıda olşturulan liste tipi model değişkenindeki verilerin her satırı, her foreach dönüşünde bir satır veriyi içeriyor. Bu sayede ogr döngü değişkeninin her turdaki özellileri ilgili tablolara @ogr.ozellik şeklinde ekleniyor.*@
+<table class="table table-bordered">
+    <tr>
+        <th>Öğrenci ID</th>
+        <th>Öğrenci Adı</th>
+        <th>Öğrenci Soyadı</th>
+        <th>Öğrenci Cinsiyeti</th>
+        <th>Öğrenci Kulübü</th>
+        @*<th>Öğrenci Fotoğrafı</th>*@
+    </tr>
+    <tbody>
+        @foreach (var ogr in Model)
+        {
+            <tr>
+                <td> @ogr.OGRENCIID</td>
+                <td> @ogr.OGRAD </td>
+                <td> @ogr.OGRSOYAD </td>
+                <td> @ogr.OGRCINSIYET </td>
+                <td> @ogr.OGRKULUP </td>
+                @*<td> @ogr.OGRFOTO </td>*@
+            </tr>
+
+        }
+
+
+    </tbody>
+
+
+</table>
+
